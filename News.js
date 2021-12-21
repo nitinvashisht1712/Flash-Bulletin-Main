@@ -10,7 +10,7 @@ function News() {
     <View
       style={{
         ...styles.container,
-        backgroundColor: darkTheme ? "#282C35" : "white",
+        backgroundColor: "white",
       }}
     >
       <InshortTabs />

@@ -13,7 +13,7 @@ const BOT = {
 }
 class ChatBot extends Component {
   state = {
-      messages: [{_id:2, text: 'My Name is DODO', createdAt: new Date(),user: BOT},{_id:1, text: 'Hi', createdAt: new Date(),user: BOT}],
+      messages: [],
       id : 1,
       name: '',
   }

@@ -13,22 +13,18 @@ const TopNavigation = ({ index, setIndex }) => {
     <View
       style={{
         ...styles.container,
-        backgroundColor: darkTheme ? "#282C35" : "white",
+       
       }}
     >
       {index === 0 ? (
         <TouchableOpacity
-          onPress={() => setDarkTheme(!darkTheme)}
+          
           style={styles.left}
         >
           <Text
-            style={{ ...styles.text, color: darkTheme ? "lightgrey" : "black" }}
+            style={{ ...styles.text, color: "black" }}
           >
-            <MaterialCommunityIcons
-              name="theme-light-dark"
-              size={24}
-              color="#007FFF"
-            />
+           
           </Text>
         </TouchableOpacity>
       ) : (
@@ -38,14 +34,14 @@ const TopNavigation = ({ index, setIndex }) => {
         >
           <SimpleLineIcons name="arrow-left" size={15} color="#007FFF" />
           <Text
-            style={{ ...styles.text, color: darkTheme ? "lightgrey" : "black" }}
+            style={{ ...styles.text, color: "black" }}
           >
             Discover
           </Text>
         </TouchableOpacity>
       )}
 
-      <Text style={{ ...styles.center, color: darkTheme ? "white" : "black" }}>
+      <Text style={{ ...styles.center, color:"black" }}>
         {index ? "All News" : "Discover"}
       </Text>
       {index ? (
@@ -63,7 +59,7 @@ const TopNavigation = ({ index, setIndex }) => {
           onPress={() => setIndex(index === 0 ? 1 : 0)}
         >
           <Text
-            style={{ ...styles.text, color: darkTheme ? "white" : "black" }}
+            style={{ ...styles.text, color:"black" }}
           >
             All News
           </Text>

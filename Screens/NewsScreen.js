@@ -33,7 +33,7 @@ const NewsScreen = () => {
           itemHeight={windowHeight}
           vertical={true}
           renderItem={({ item, index }) => (
-            <SingleNews item={item} index={index} darkTheme={darkTheme} />
+            <SingleNews item={item} index={index}  />
           )}
           onSnapToItem={(index) => setActiveIndex(index)}
         />
