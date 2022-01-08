@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import Crypto from './Crypto'
 import { firebase } from "./firebase";
 import News from './News'
@@ -22,15 +22,20 @@ const handleSignout = async () => {
 const CustomDrawer = (props) => {
 return <View style={{flex:1}}>
   <DrawerContentScrollView {...props}>
-  <Text>Hello {currentUser}</Text>
+    <View style={{height:50, width:'100%', justifyContent:'center', alignItems:'center', marginVertical:30}}>
+      <Image  source={require("./assets/images/Logo.png")}
+          style={{ height: 50, width: 50, marginVertical:10}}/>
+           <Text style={{fontSize:20, marginVertical:10,fontWeight:'bold'}}>Hii, There</Text>
+      </View>
+ 
   <DrawerItemList {...props}/>
  
 
   
 </DrawerContentScrollView>
-<TouchableOpacity style={{position:'absolute', bottom:20}} onPress={handleSignout}>
+<TouchableOpacity style={{position:'absolute', bottom:30, right:25, height:40, width:80, backgroundColor:'#ff726f', alignItems:"center", justifyContent:'center',borderRadius:10 }} onPress={handleSignout}>
   <View>
-  <Text >SIGN OUT</Text>
+  <Text style={{color:"#fff"}} >SIGN OUT</Text>
   </View>
 
 </TouchableOpacity>
@@ -38,11 +43,11 @@ return <View style={{flex:1}}>
 }
 export default DrawerNav = () => {
   return (
-    <NavigationContainer independent={true}>
-    <Drawer.Navigator screenOptions={{headerShown:false}
+    <NavigationContainer style={{position:'absolute', top:0}} independent={true}>
+    <Drawer.Navigator screenOptions={{headerShown:true}
   } initialRouteName="Home" drawerContent={(props) => <CustomDrawer {...props}/>}>
-    <Drawer.Screen name="Crypto" component={Crypto} />
-    <Drawer.Screen name="Convertor" component={CurrencyConvertor} />
+    <Drawer.Screen name="Crypto-Price Tracker" component={Crypto} />
+    <Drawer.Screen name=" Currency Convertor" component={CurrencyConvertor} />
     <Drawer.Screen name="News" component={News} />
     <Drawer.Screen name="ChatBot" component={ChatBot} />
     </Drawer.Navigator>
@@ -50,4 +55,4 @@ export default DrawerNav = () => {
   )
 };
 
-
+console.disableYellowBox = true; 

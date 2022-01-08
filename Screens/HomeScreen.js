@@ -15,7 +15,7 @@ const HomeScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   root: {
-    paddingTop: Platform.OS === "android" ? 25 : 0,
+    paddingTop: 0,
     backgroundColor: "#fff",
     flex: 1,
   },

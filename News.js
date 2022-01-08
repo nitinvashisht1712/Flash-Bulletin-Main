@@ -4,7 +4,7 @@ import Context, { NewsContext } from "./API/Context";
 import InshortTabs from "./components/InshortTabs";
 
 function News() {
-  const { darkTheme } = useContext(NewsContext);
+  // const { darkTheme } = useContext(NewsContext);
 
   return (
     <View
@@ -21,7 +21,7 @@ function News() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight,
+    marginTop: 0,
   },
 });
 

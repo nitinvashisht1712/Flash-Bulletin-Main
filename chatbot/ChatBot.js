@@ -13,9 +13,14 @@ const BOT = {
 }
 class ChatBot extends Component {
   state = {
-      messages: [],
-      id : 1,
-      name: '',
+      messages: [
+      //   {
+      //   _id:2, text:'My Name is Mr. Bot', createdAt: new Date(), user: BOT
+      // },{
+      //   _id:1, text:'Hello,', createdAt: new Date(), user: BOT
+      // }
+    ],
+      
   }
   componentDidMount(){
       Dialogflow_V2.setConfiguration(

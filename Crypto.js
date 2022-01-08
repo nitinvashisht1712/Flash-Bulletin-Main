@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
   },
   titleWrapper: {
-    marginTop: 20,
+    marginTop: 0,
     paddingHorizontal: 16,
   },
   largeTitle: {
